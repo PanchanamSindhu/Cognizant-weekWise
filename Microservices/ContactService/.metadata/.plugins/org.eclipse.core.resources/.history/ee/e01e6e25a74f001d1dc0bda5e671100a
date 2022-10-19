@@ -1,0 +1,19 @@
+package com.cog.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.cog.entity.Contact;
+
+@Service
+public class ContactServiceImpl implements ContactService{
+
+	@Override
+	public List<Contact> getContactOfuser(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

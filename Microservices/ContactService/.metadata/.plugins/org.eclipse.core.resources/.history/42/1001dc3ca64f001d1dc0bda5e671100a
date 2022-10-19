@@ -1,0 +1,11 @@
+package com.cog.entity;
+
+public class Contact {
+
+	private long cID;
+	private String email;
+	private long userID;
+
+	
+	
+}
