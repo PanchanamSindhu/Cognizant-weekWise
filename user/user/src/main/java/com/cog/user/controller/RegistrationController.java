@@ -50,16 +50,16 @@ public class RegistrationController {
 		User user = new User(signUpRequest.getName(), signUpRequest.getUserName(), signUpRequest.getEmailId(),
 				passwordEncoder.encode(signUpRequest.getPassword()));
 
-		Set<String> strRoles = signUpRequest.getRole();
+		//System.out.println("signup rea "+signUpRequest.toString());
+		Set<Role> strRoles = signUpRequest.getRole();
 		Set<Role> roles = new HashSet<>();
-
 		if (strRoles == null) {
 			Role userRole = roleRepository.findByName(ERole.ROLE_READER)
 					.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
 			roles.add(userRole);
 		} else {
 			strRoles.forEach(role -> {
-				if (role.equalsIgnoreCase("author")) {
+				if (role.getName().equals(ERole.ROLE_AUTHOR)) {
 					Role authorRole = roleRepository.findByName(ERole.ROLE_AUTHOR)
 							.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
 					roles.add(authorRole);
