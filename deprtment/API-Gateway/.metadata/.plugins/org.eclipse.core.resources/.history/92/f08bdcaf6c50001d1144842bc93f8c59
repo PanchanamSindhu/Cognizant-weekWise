@@ -1,0 +1,6 @@
+server.port=8061
+eureka.instance.hostname=localhost
+spring.application.name=API-Gateway
+spring.cloud.gateway.routes[0].id=User-Service
+spring.cloud.gateway.routes[0].uri=lb://User-Service
+spring.cloud.gateway.routes[0].predicates[0]=path=/user/**
