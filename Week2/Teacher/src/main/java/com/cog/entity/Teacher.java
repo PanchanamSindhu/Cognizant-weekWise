@@ -22,6 +22,5 @@ public class Teacher {
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private Long teacherId;
 	private String teacherName;
-	private Long studentId;
 
 }

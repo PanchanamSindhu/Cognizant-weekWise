@@ -22,6 +22,10 @@ public class StudentService {
 		return this.studentRep.findAll();
 	}
 	
+	public List<Student> getStudentsWithTeacherId(Long teacherId){
+		return this.studentRep.findByTeacherId(teacherId);
+	}
+	
 	public Student saveStudent(Student student) {
 		return studentRep.save(student);
 	}

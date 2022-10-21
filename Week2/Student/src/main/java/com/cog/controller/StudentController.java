@@ -28,26 +28,32 @@ public class StudentController {
 	private StudentService studentService;
 
 	@GetMapping("/getstudents")
-	public List<Student> getStudents(){
+	public List<Student> getStudents() {
 		return this.studentService.getStudents();
 	}
+
+	@GetMapping("/getstudents/{id}")
+	public List<Student> getStudentsWithTeacherId(@PathVariable("id") Long id) {
+		return this.studentService.getStudentsWithTeacherId(id);
+	}
+
 	@PostMapping(value = "/savestudent")
-	public Student saveDepartment(@RequestBody Student student) {
+	public Student saveStudent(@RequestBody Student student) {
 		return this.studentService.saveStudent(student);
 
 	}
 
 	@GetMapping(value = "/{id}")
-	public Student findByDepartmentId(@PathVariable("id") Long id) {
+	public Student findByStudentId(@PathVariable("id") Long id) {
 		return this.studentService.findByStudentId(id);
 
 	}
-	
+
 	@DeleteMapping("/delete/{id}")
 	public ResponseEntity<MessageResponse> removeStudent(@PathVariable("id") Long id) {
-		 this.studentService.removeStudnet(id);
-		 return ResponseEntity.ok(new MessageResponse("Student Removed successfully!"));
-		
+		this.studentService.removeStudnet(id);
+		return ResponseEntity.ok(new MessageResponse("Student Removed successfully!"));
+
 	}
 
 }

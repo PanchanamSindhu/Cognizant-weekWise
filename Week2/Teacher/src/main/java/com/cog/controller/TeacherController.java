@@ -28,9 +28,9 @@ public class TeacherController {
 
 	}
 
-	@GetMapping(value = "/getTeacher/{id}")
-	public ResponseTemplateVO getUserWithDepartmnet(@PathVariable("id") Long teacherId) {
-		return teacherService.getTeacherWithStudent(teacherId);
+	@GetMapping(value = "/{id}")
+	public ResponseTemplateVO getUserWithDepartmnet(@PathVariable("id") Long id) {
+		return teacherService.getTeacherWithStudent(id);
 	}
 	
 	

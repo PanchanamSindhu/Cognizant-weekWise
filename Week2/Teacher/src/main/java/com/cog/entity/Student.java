@@ -11,8 +11,8 @@ public class Student {
 	
 	private Long studentId;
 	private String studentFirstName;
-	private int classId;
 	private String studentLastName;
 	private Long marks;
+	private Long teacherId;
 
 }
