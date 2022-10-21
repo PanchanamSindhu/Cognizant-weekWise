@@ -30,7 +30,7 @@ public class StudentService {
 		return studentRep.save(student);
 	}
 
-	public Student findByStudentId(Long studentId) {
+	public Optional<Student> findByStudentId(Long studentId) {
 		return studentRep.findByStudentId(studentId);
 
 	}
