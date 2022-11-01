@@ -1,0 +1,6 @@
+package com.cog.Employee.exception;
+
+public class ResourceNotFoundException extends Exception{
+	
+
+}

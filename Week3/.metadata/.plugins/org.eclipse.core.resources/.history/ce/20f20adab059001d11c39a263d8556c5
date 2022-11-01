@@ -1,0 +1,6 @@
+package com.cog.Employee.service;
+
+public interface EmployeeService {
+	
+
+}

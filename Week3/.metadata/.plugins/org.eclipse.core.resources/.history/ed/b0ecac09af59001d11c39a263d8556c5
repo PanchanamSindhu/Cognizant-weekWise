@@ -1,0 +1,5 @@
+package com.cog.Employee.entity;
+
+public class Employee {
+
+}

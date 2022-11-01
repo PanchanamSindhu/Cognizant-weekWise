@@ -1,0 +1,48 @@
+package com.cog.Employee.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cog.Employee.entity.Employee;
+import com.cog.Employee.repository.EmployeeRepo;
+import com.cog.Employee.service.EmployeeService;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+	
+	@Autowired
+	private EmployeeRepo empRepo;
+
+	@Override
+	public List<Employee> getAllEmployees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee getEmployeeById(Long id) {
+		// TODO Auto-generated method stub
+		return empRepo.findById(id);
+	}
+
+	@Override
+	public Employee createEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee updateEmployee(Long id, Employee employeeDetails) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteEmployee(Long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
